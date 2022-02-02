@@ -71,16 +71,16 @@ export default function PaginaInicial() {
                     <Box
                         as="form"
                         onSubmit ={function (event){
-                            event.preventDefault()
-                            console.log('alguem submeteu o form')
-                            roteamento.push('./chat')
+                            event.preventDefault();
+                            console.log('alguem submeteu o form');
+                            roteamento.push(`./chat?username=${username}`);
                             // window.location.href = './chat'
                         }}
                         styleSheet={{
                             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                             width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px',
                         }}
-                    >
+                    >;
                         <Titulo tag="h2">Boas vindas de volta!</Titulo>
                         <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300] }}>
                             {appConfig.name}
